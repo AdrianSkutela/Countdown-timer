@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="countdownTimer.css">
+  </head>
+  <body>
+    <div class="countdown column">
+      <div class="countdown__timer row">
+        <div class="coundown__card">
+          <input type="text" class="countdown__text" id="countdown__hours">
+          <p class = "hours">hours</p>
+        </div>
+        <div class="coundown__card">
+          <input type="text" class="countdown__text" id="countdown__minutes">
+          <p class = "hours">minutes</p>
+        </div>
+        <div class="coundown__card">
+          <input type="text" class="countdown__text" id="countdown__seconds">
+          <p class = "hours">seconds</p>
+        </div>
+      </div>
+      <div class="countdown__buttons row">
+        <button type="button" class="button" id="countdown__reset"> reset </button>
+        <button type="button" class="toggleButton" id="countdown__startStop"> start </button>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="inputBinder.js"></script>
+  <script type="module" src="util.js"></script>
+  <script type="module" src="timer.js"></script>
+  <script type="module" src="countdownTimer.js"></script>
+</html>
