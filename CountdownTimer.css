@@ -1,0 +1,63 @@
+:root {
+  --primaryColor: 255, 0, 0;
+  --secondaryColor: 0, 255, 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+* {
+  color: rgb(var(--primaryColor));
+  background-color: rgb(var(--secondaryColor));
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown__number {
+  font-size: 10rem;
+  display: block;
+  margin: 10px;
+}
+.countdown__colonIndicator {
+  font-size: 10rem;
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  font-size: 5rem;
+  display: block;
+  border: 10px solid rgb(var(--primaryColor));
+  margin: 40px 40px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+    color: rgb(var(--secondaryColor));
+    background-color: rgb(var(--primaryColor));
+}
+
+button:focus {
+  outline: none;
+}
