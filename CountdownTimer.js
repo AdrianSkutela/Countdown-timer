@@ -1,6 +1,7 @@
 
 import Timer from "./timer.js";
 import InputBinder from "./inputBinder.js";
+import Util from "./util.js"
 //TODO: add input validation
 (() => {
   let blinkInterval;
@@ -48,9 +49,9 @@ import InputBinder from "./inputBinder.js";
   }
   const onInputChanged = () => {
     if (!timer.isCounting){
-      timer.hours = hours.value;
-      timer.minutes = minutes.value;
-      timer.seconds = seconds.value;
+      timer.hours = hours.value = Util.clamp(hours.value, 0, 23);
+      timer.minutes = minutes.value = Util.clamp(minutes.value, 0, 59);
+      timer.seconds = seconds.value = Util.clamp(seconds.value, 0, 59);
 
       resetTime = {
         hours: hours.value,
@@ -59,6 +60,7 @@ import InputBinder from "./inputBinder.js";
       }
     }
   }
+
   hours.fixedWidth = 2;
   minutes.fixedWidth = 2;
   seconds.fixedWidth = 2;
