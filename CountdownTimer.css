@@ -1,8 +1,7 @@
-/*TODO: style the text inputs, and remove old styles*/
 
 :root {
   --primaryColor: 255, 0, 0;
-  --secondaryColor: 0, 255, 0;
+  --secondaryColor: 255, 255, 255;
 }
 
 html {
@@ -27,21 +26,26 @@ html {
 .column {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   flex: 1;
   justify-content: center;
   align-items: center;
+  border: 5px solid blue;
+}
+body > .column {
+  height: 100vh;
 }
 
-.countdown__number {
-  font-size: 10rem;
-  display: block;
-  margin: 10px;
+.countdown__card > p {
+  font-size: 4rem;
 }
-.countdown__colonIndicator {
+
+.countdown__text {
   font-size: 10rem;
   display: block;
-  margin: 10px 0;
+  width: 2em;
+  text-align: center;
+  border: 5px solid rgb(var(--primaryColor));
 }
 
 button {
@@ -56,8 +60,8 @@ button:hover {
 }
 
 button:active {
-    color: rgb(var(--secondaryColor));
-    background-color: rgb(var(--primaryColor));
+  color: rgb(var(--secondaryColor));
+  background-color: rgb(var(--primaryColor));
 }
 
 button:focus {

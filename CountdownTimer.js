@@ -2,7 +2,6 @@
 import Timer from "./timer.js";
 import InputBinder from "./inputBinder.js";
 import Util from "./util.js"
-//TODO: add input validation
 (() => {
   let blinkInterval;
   const root = document.documentElement;
@@ -20,7 +19,7 @@ import Util from "./util.js"
     seconds.value = timer.seconds;
   }
   const onTimerFinish = (timer) => {
-    blinkInterval = setInterval(onBlink, 100);
+    blinkInterval = setInterval(onBlink, 500);
   }
   const onReset = () => {
     timer.set(resetTime);
